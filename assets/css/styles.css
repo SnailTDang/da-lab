@@ -14,9 +14,10 @@ html {
     font-family: 'Georama', sans-serif;
     scroll-behavior: smooth;
 }
-/* #main {
+#main {
+    display: table;
 
-} */
+}
 
 .clear {
     clear: both;
@@ -495,13 +496,14 @@ html {
 
 
 .modal{
+    z-index: 2;
     display: none;
-    /* display: flex; */
     position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;
-    padding-top: 50px;
+    height: 100%;
+    padding-top: 100px;
     overflow: auto;
     background-color: #370617be;
     color: wheat;  
@@ -511,13 +513,13 @@ html {
 }
 
 .open {
-    display: flex;
+    display: block;
     
 }
 
 .modal-container{
+    margin: auto;
     width: 900px;
-    max-width: calc(100%-32px);
     min-height: 200px;
     background-color: #fff;
     position: relative;
@@ -693,13 +695,19 @@ html {
     }
     .modal {
         bottom: auto;
-        top: 60px;
+        top: 0px;
+        padding-top: 100px;
         padding-left: 20px;
         padding-right: 20px;
     }
     .menu-controller {
         display: none;
     }
+    .modal-container{
+        margin: auto;
+        width: 600px;
+    }
+    
 }
 
 
@@ -711,7 +719,6 @@ html {
         font-size: 25px;
         position: absolute; 
         right: 0px;
-        Top:0;
         line-height: 46px;
         text-align: center;
         width: 20%;
@@ -791,9 +798,14 @@ html {
     }
     .modal {
         bottom: auto;
-        top: 30px;
+        top: 0px;
+        padding-top: 50px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .modal-container{
+        width: 90%;
+        margin: auto;
     }
     .mobile-opacity {
         display: none;
@@ -832,5 +844,12 @@ html {
         text-decoration: none;
         font-size: 20px;
         font-weight: bold;
+    }
+}
+
+@media only screen and (max-height:580px) {
+    .modal {
+        padding-top: 50px;
+        
     }
 }
