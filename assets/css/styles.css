@@ -176,13 +176,8 @@ html {
 
 }
 
-#slider .text-content .text-heading{
-    font-size: 25px;
-    
-    
-}
 #slider .text-content .text-description{
-    font-size: 12pt;
+    /* font-size: 12pt; */
     margin: 10px 0;
 }
 
@@ -508,14 +503,14 @@ html {
     width: 100%;
     padding-top: 50px;
     overflow: auto;
-    background-color: #370617a5;
+    background-color: #370617be;
     color: wheat;  
     align-items: center;
     justify-content: center;
     
 }
 
-.modal.open {
+.open {
     display: flex;
     
 }
@@ -627,6 +622,8 @@ html {
     right: 0; */
 }   
 
+
+
 @keyframes modalFadeIn {
     from {
         opacity: 0;
@@ -636,5 +633,195 @@ html {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu-controller {
+        display: none;
+    }
+    .mobile-opacity {
+        display: none;
+    }
+    #home-nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1024px ) {
+    .mobile-menu {
+        display: none;
+    }
+    #home-nav {
+        display: none;
+    }
+    #header {
+        display: block;
+    }
+    #nav > li > a {
+        padding: 0 30px;
+    }
+    #slider {
+        padding-top: 70%;
+    }
+    #slider .text-content {
+        padding-bottom: 10px;
+        font-size: smaller;
+    }
+    #slider .text-content .text-description {
+        margin: 0 0;
+    }
+    #section1-content {
+        padding: 0 16px;
+    }
+    #content .members-item {
+        width: 50%;
+    }
+    .list-tickets {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .city-imgs {
+        width: 50%;
+        padding: 0 20px;
+    }
+    .member-name{
+        margin: 30px 0;
+    }
+    .members-item .members-img{
+        width: 80%;
+    }
+    .modal {
+        bottom: auto;
+        top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .menu-controller {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 739px) {
+    #header {
+        display: block;
+    }
+    .menu-controller {
+        color: wheat;
+        font-size: 25px;
+        position: absolute; 
+        right: 50px;
+        Top:0;
+        line-height: 46px;
+    }
+
+    .search-btn {
+        display: none;
+    }
+    #home-nav > a {
+        font-size: 20px;
+        width: 100%;
+        float: left;
+        color: #fff;
+        text-decoration: none;
+        line-height: 46px;
+        text-transform: uppercase;
+        font-weight: bold; 
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+    #home-nav:hover >a {
+        color: #000;
+        background-color: #ffba08 ;
+    }
+    #header #nav {
+        display: none;
+    }
+    #home {
+        display: block;
+    }
+    #slider {
+        padding-top: 65%;
+    }
+    #slider .text-content {
+        padding-bottom: 0;
+        font-size: x-small;
+    }
+    #slider .text-content .text-description {
+        margin: 5px 0;
+    }
+    
+    .content-section {
+        padding: 12px 4px;
+    }
+    #section1-content {
+        padding: 0 16px;
+    }
+    #content .members-item {
+        width: 100%;
+    }
+    .list-tickets {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .city-imgs {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .col-form{
+        width: 100%;
+    }
+    .row-form {
+        width: 100%;
+    }
+    .footer {
+        font-size: 20px;
+    }
+    .modal {
+        bottom: auto;
+        top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .mobile-opacity {
+        display: none;
+    }
+    .open {
+        display: flex;
+    }
+    
+    /* Menu List */
+    .mobile-opacity {
+        position: fixed;
+        top: 46px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #0c010570;
+    }
+    
+    .mobile-menu {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+        background-image: linear-gradient(to right, #db1e1e, #f17b31);
+    }
+    .menu-list:hover {
+        background-color: #ffba08 ;
+        color: #000;
+    }
+    
+    .menu-list {
+        height: 46px;
+        display: block;
+        padding: 13px 0 13px 40px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
     }
 }

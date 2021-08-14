@@ -18,6 +18,11 @@
 
     <div id="main">
         <div id="header">
+            <!-- Menu controler -->
+            <div class="menu-controller js-open-menu">
+                <i class="ti-menu"></i>  
+            </div>
+            <div id="home-nav"><a href="#">Home</a></div>
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
@@ -192,7 +197,7 @@
     
             </div>
         </div>
-        
+    <div>  
         <footer class="content-section footer">
             <i class="ti-facebook icon-footer"></i>
             <i class="ti-instagram icon-footer"></i>
@@ -246,6 +251,14 @@
             </div>
         </div>
     </div>
+    <div class="mobile-opacity js-menu">
+        <div class="mobile-menu js-open-menu">
+            <a href="#band-section" class="menu-list js-close-menu">BAND</a>
+            <a href="#show-section" class="menu-list js-close-menu">SHOW</a>
+            <a href="#contact-section" class="menu-list js-close-menu">CONTACT</a>
+            <a href="#" class="menu-list">MORE</a>
+        </div>
+    </div>
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-tickets')
         const closeBuyBtns = document.querySelectorAll('.js-close-tickets')
@@ -259,8 +272,6 @@
         function closeBuyTickets(){
             modal.classList.remove('open')
         }
-
-        
         
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
@@ -275,6 +286,26 @@
         modalContainer.addEventListener('click', function (event) {
                 event.stopPropagation()
             })
+    </script>
+    <script>
+        const MenuOpen = document.querySelector('.js-open-menu')
+        const MenuClose = document.querySelectorAll('.js-close-menu')
+        const Menu = document.querySelector('.js-menu')
+
+        function openMenu(){
+            Menu.classList.add('open')
+        }
+
+        function closeMenu(){
+            Menu.classList.remove('open')
+        }
+
+        // for (const closemenu of MenuClose){
+        //     closemenu.EventListener('click', closeMenu)
+        // }
+
+        MenuOpen.addEventListener('click', openMenu)
+
     </script>
 </body>
 
