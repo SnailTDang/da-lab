@@ -15,8 +15,8 @@ html {
     scroll-behavior: smooth;
 }
 #main {
-    display: block
-
+    display: block;
+    overflow: hidden ;
 }
 
 .clear {
@@ -57,7 +57,7 @@ html {
     left: 0;
     right: 0;
     align-items: center;
-    /* display: flex;  */
+    display: flex; 
     justify-content: center;
     z-index: 1;
     
@@ -848,10 +848,13 @@ html {
         font-size: 20px;
         font-weight: bold;
     }
+    
 }
 
 @media only screen and (max-height:580px) {
     .modal {
         padding-top: 50px;      
     }
+
+
 }
